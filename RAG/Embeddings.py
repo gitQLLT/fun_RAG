@@ -1,12 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-'''
-@File    :   Embeddings.py
-@Time    :   2024/02/10 21:55:39
-@Author  :   不要葱姜蒜
-@Version :   1.0
-@Desc    :   None
-'''
 
 import os
 from copy import copy
@@ -16,7 +9,6 @@ import numpy as np
 os.environ['CURL_CA_BUNDLE'] = ''
 from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
-
 
 class BaseEmbeddings:
     """
@@ -115,7 +107,6 @@ class DashscopeEmbedding(BaseEmbeddings):
             input=text
         )
         return response.output['embeddings'][0]['embedding']
-
 
 class BgeEmbedding(BaseEmbeddings):
     """
